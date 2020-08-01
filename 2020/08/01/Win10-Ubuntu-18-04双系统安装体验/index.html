@@ -23,18 +23,18 @@
   <meta name="description" content="说是安装体验，其实也就是对于安装过程中遇到的问题做些简单的记录，以备将来查阅。 安装环境主系统：Windows 10 家庭中文版，版本1903 硬件：  Lenovo Y7000P 2019 两块SSD，第一块上已安装Windows，均为GPT格式 一块独立显卡，型号为NVIDIA GeForce GTX 1660 Ti  之所以要提一嘴显卡是因为安装时会有坑 硬盘分区对于双硬盘安装双系统的硬盘分">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Win10 + Ubuntu 18.04双系统安装体验">
-<meta property="og:url" content="http://yoursite.com/2020/07/30/Win10-Ubuntu-18-04%E5%8F%8C%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%BD%93%E9%AA%8C/index.html">
+<meta property="og:url" content="http://yoursite.com/2020/08/01/Win10-Ubuntu-18-04%E5%8F%8C%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%BD%93%E9%AA%8C/index.html">
 <meta property="og:site_name" content="Yuki-yao&#39;s Blog">
 <meta property="og:description" content="说是安装体验，其实也就是对于安装过程中遇到的问题做些简单的记录，以备将来查阅。 安装环境主系统：Windows 10 家庭中文版，版本1903 硬件：  Lenovo Y7000P 2019 两块SSD，第一块上已安装Windows，均为GPT格式 一块独立显卡，型号为NVIDIA GeForce GTX 1660 Ti  之所以要提一嘴显卡是因为安装时会有坑 硬盘分区对于双硬盘安装双系统的硬盘分">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-07-30T04:02:26.000Z">
-<meta property="article:modified_time" content="2020-08-01T07:12:40.447Z">
+<meta property="article:published_time" content="2020-08-01T07:16:00.000Z">
+<meta property="article:modified_time" content="2020-08-01T07:17:58.108Z">
 <meta property="article:author" content="Yuki-yao">
 <meta property="article:tag" content="Ubuntu">
 <meta property="article:tag" content="双系统">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2020/07/30/Win10-Ubuntu-18-04%E5%8F%8C%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%BD%93%E9%AA%8C/">
+<link rel="canonical" href="http://yoursite.com/2020/08/01/Win10-Ubuntu-18-04%E5%8F%8C%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%BD%93%E9%AA%8C/">
 
 
 <script id="page-configurations">
@@ -218,7 +218,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/30/Win10-Ubuntu-18-04%E5%8F%8C%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%BD%93%E9%AA%8C/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/01/Win10-Ubuntu-18-04%E5%8F%8C%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%BD%93%E9%AA%8C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -240,16 +240,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2020-07-30 12:02:26" itemprop="dateCreated datePublished" datetime="2020-07-30T12:02:26+08:00">2020-07-30</time>
+              <time title="创建时间：2020-08-01 15:16:00 / 修改时间：15:17:58" itemprop="dateCreated datePublished" datetime="2020-08-01T15:16:00+08:00">2020-08-01</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-08-01 15:12:40" itemprop="dateModified" datetime="2020-08-01T15:12:40+08:00">2020-08-01</time>
-              </span>
 
           
 
@@ -273,7 +267,7 @@
 <p>之所以要提一嘴显卡是因为安装时会有坑</p>
 <h2 id="硬盘分区"><a href="#硬盘分区" class="headerlink" title="硬盘分区"></a>硬盘分区</h2><p>对于双硬盘安装双系统的硬盘分区上，网上有意见认为即使想把ubuntu的本体装在第二块硬盘上，也必须在Win所在的系统盘上分一块区域留给ubuntu的efi文件，否则boot时无法检测到ubuntu的引导。但实际上，即使将ubuntu全部分在第二块硬盘上也没有任何问题，正常安装之后重启系统，将进入grub2引导界面，可以自行选择windows或者ubuntu进行启动。</p>
 <p>在资源管理器中右击“此电脑”选择管理，在磁盘管理界面右击要分区的磁盘，选择“压缩卷”即可从中分出留给ubuntu安装的空间，分出的空间将以“未分配”的形式显示在磁盘状态中。需要注意的是，已经使用过一段时间的磁盘会产生不连续的碎片区域，此时能够分出的空间可能会小于实际空闲的空间大小，据说使用分区助手软件可以解决。</p>
-<h2 id="烧制U盘"><a href="#烧制U盘" class="headerlink" title="烧制U盘"></a>烧制U盘</h2><p>烧制采用了开源软件Rufus，分区类型选择GUID（GPT）。Ubuntu镜像可以从<a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/下载，注意被烧制的U盘将被格式化。" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/下载，注意被烧制的U盘将被格式化。</a></p>
+<h2 id="烧制U盘"><a href="#烧制U盘" class="headerlink" title="烧制U盘"></a>烧制U盘</h2><p>烧制采用了开源软件Rufus，分区类型选择GUID（GPT）。Ubuntu镜像可以从<a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/</a>下载，注意被烧制的U盘将被格式化。</p>
 <h2 id="U盘启动"><a href="#U盘启动" class="headerlink" title="U盘启动"></a>U盘启动</h2><p>Y7000P进入BIOS的快捷键是开机长按F2，进入Boot Manager的快捷键是开机长按F12。使用U盘启动前，先进入BIOS关掉Secure选项卡下的Secure Boot（考虑到正规的Ubuntu发行版已经支持Secure Boot，这步操作可能有点多余）。然后进入Boot Manager，选择U盘启动。</p>
 <p>启动后出现grub的选择界面，不要急着选Install Ubuntu，先在对应选项按下E键进入编辑模式，然后找到有linux开头的那一行，将结尾处的“—”替换为<code>nouveau.modeset=0</code>或者<code>modeprobe.blacklist=nouveau</code>。然后再按下F10即可正常进入系统安装流程。进行这一步的原因是Ubuntu内置的开源显卡驱动nouveau对于较新的N卡支持有些问题，直接进入系统安装会在boot时出现花屏卡死的情况，此时可以强制关机后重新进入grub界面然后按上述方法操作即可。值得一提的是，Ubuntu 20.04仍然存在此bug。</p>
 <h2 id="系统安装"><a href="#系统安装" class="headerlink" title="系统安装"></a>系统安装</h2><p>安装过程中建议不要勾选“安装Ubuntu时下载更新”，之后可以将Ubuntu的镜像源设成清华源之后再自行更新，会快很多。可以勾选“为图形……安装第三方软件”。</p>
@@ -282,7 +276,7 @@
 <h2 id="安装后的一些配置"><a href="#安装后的一些配置" class="headerlink" title="安装后的一些配置"></a>安装后的一些配置</h2><h3 id="安装显卡闭源驱动"><a href="#安装显卡闭源驱动" class="headerlink" title="安装显卡闭源驱动"></a>安装显卡闭源驱动</h3><p>首先记得在Software and Update应用下找到Additional Drivers，为显卡安装NVIDIA提供的闭源驱动，这样就不用每次启动都要ban掉nouveau了。</p>
 <h3 id="修改grub默认启动项"><a href="#修改grub默认启动项" class="headerlink" title="修改grub默认启动项"></a>修改grub默认启动项</h3><p>对于我这种Windows用的比较频繁的用户而言，还是希望在grub界面把默认启动项设成Windows，不然每次启动都得手动按下方向键还是挺烦的。打开Ubuntu终端，输入<code>sudo gedit /etc/default/grub</code>，将<code>GRUB_DEFAULT=&quot;0&quot;</code>改成你的启动项中Windows的序号（从0开始）即可。顺便也可以通过修改GRUB_TIMEOUT来改变等待选择的时间。</p>
 <p>修改完成后，执行<code>sudo update-grub</code>来将修改应用到grub.cfg文件（不建议直接修改该文件）。</p>
-<h3 id="修改Ubuntu默认软件源"><a href="#修改Ubuntu默认软件源" class="headerlink" title="修改Ubuntu默认软件源"></a>修改Ubuntu默认软件源</h3><p>参考<a href="https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/。最好在做完这一步后再进行软件的更新与安装。" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/。最好在做完这一步后再进行软件的更新与安装。</a></p>
+<h3 id="修改Ubuntu默认软件源"><a href="#修改Ubuntu默认软件源" class="headerlink" title="修改Ubuntu默认软件源"></a>修改Ubuntu默认软件源</h3><p>参考<a href="https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/</a>。最好在做完这一步后再进行软件的更新与安装。</p>
 <h3 id="关于Ubuntu与Windows时间错乱问题"><a href="#关于Ubuntu与Windows时间错乱问题" class="headerlink" title="关于Ubuntu与Windows时间错乱问题"></a>关于Ubuntu与Windows时间错乱问题</h3><p>主要是Windows与Ubuntu的时间算法不同导致的。解决方法为在Ubuntu终端中输入如下命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">timedatectl <span class="built_in">set</span>-local-rtc 1 --adjust-system-clock</span><br></pre></td></tr></table></figure>
 
